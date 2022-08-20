@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Posterr
-//
-//  Created by Matheus Dantas on 20/08/22.
-//
-
 import UIKit
 
 @main
