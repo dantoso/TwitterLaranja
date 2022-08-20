@@ -28,10 +28,3 @@ struct PostView: View {
 	
 }
 
-
-struct PostView_Previews: PreviewProvider {
-	static var previews: some View {
-		PostView(post: Post(author: User(username: "test1"), content: "heyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyhey!", mention: Post(author: User(username: "test2"), content: "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello")))
-	}
-}
-
