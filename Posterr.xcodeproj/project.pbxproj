@@ -103,8 +103,8 @@
 			children = (
 				FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */,
 				FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */,
-				FB21FC0E28B15C5F00D04ADC /* Views */,
 				FB21FBE728B15A7C00D04ADC /* Assets.xcassets */,
+				FB21FC0E28B15C5F00D04ADC /* Views */,
 				FB21FBE928B15A7C00D04ADC /* LaunchScreen.storyboard */,
 				FB21FBEC28B15A7C00D04ADC /* Info.plist */,
 			);
