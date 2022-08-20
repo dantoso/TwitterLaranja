@@ -17,6 +17,8 @@
 		FB21FC0228B15A7C00D04ADC /* PosterrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC0128B15A7C00D04ADC /* PosterrUITestsLaunchTests.swift */; };
 		FB21FC1028B15C8800D04ADC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC0F28B15C8800D04ADC /* ProfileView.swift */; };
 		FB21FC1628B1600600D04ADC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC1528B1600600D04ADC /* TabBarController.swift */; };
+		FB21FC1828B1840500D04ADC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC1728B1840500D04ADC /* Post.swift */; };
+		FB21FC1A28B184B700D04ADC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC1928B184B700D04ADC /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		FB21FC0128B15A7C00D04ADC /* PosterrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB21FC0F28B15C8800D04ADC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FB21FC1528B1600600D04ADC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FB21FC1728B1840500D04ADC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FB21FC1928B184B700D04ADC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */,
 				FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */,
 				FB21FBE728B15A7C00D04ADC /* Assets.xcassets */,
+				FB21FC1B28B1857700D04ADC /* Models */,
 				FB21FC0E28B15C5F00D04ADC /* Views */,
 				FB21FBE928B15A7C00D04ADC /* LaunchScreen.storyboard */,
 				FB21FBEC28B15A7C00D04ADC /* Info.plist */,
@@ -152,6 +157,15 @@
 				FB21FC0F28B15C8800D04ADC /* ProfileView.swift */,
 			);
 			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		FB21FC1B28B1857700D04ADC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB21FC1728B1840500D04ADC /* Post.swift */,
+				FB21FC1928B184B700D04ADC /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,8 +301,10 @@
 				FB21FC1028B15C8800D04ADC /* ProfileView.swift in Sources */,
 				FB21FBE328B15A7A00D04ADC /* HomeView.swift in Sources */,
 				FB21FC1628B1600600D04ADC /* TabBarController.swift in Sources */,
+				FB21FC1828B1840500D04ADC /* Post.swift in Sources */,
 				FB21FBDF28B15A7A00D04ADC /* AppDelegate.swift in Sources */,
 				FB21FBE128B15A7A00D04ADC /* SceneDelegate.swift in Sources */,
+				FB21FC1A28B184B700D04ADC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
