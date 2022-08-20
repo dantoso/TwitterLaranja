@@ -19,6 +19,8 @@
 		FB21FC1628B1600600D04ADC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC1528B1600600D04ADC /* TabBarController.swift */; };
 		FB21FC1828B1840500D04ADC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC1728B1840500D04ADC /* Post.swift */; };
 		FB21FC1A28B184B700D04ADC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC1928B184B700D04ADC /* User.swift */; };
+		FB21FC2228B190ED00D04ADC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2128B190ED00D04ADC /* PostView.swift */; };
+		FB21FC2428B1966E00D04ADC /* MentionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2328B1966E00D04ADC /* MentionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		FB21FC1528B1600600D04ADC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FB21FC1728B1840500D04ADC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FB21FC1928B184B700D04ADC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FB21FC2128B190ED00D04ADC /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		FB21FC2328B1966E00D04ADC /* MentionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				FB21FC1528B1600600D04ADC /* TabBarController.swift */,
+				FB21FC2028B190D700D04ADC /* Components */,
 				FB21FC1128B15D7A00D04ADC /* HomeScreen */,
 				FB21FC1228B15D7F00D04ADC /* ProfileScreen */,
 			);
@@ -166,6 +171,15 @@
 				FB21FC1928B184B700D04ADC /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FB21FC2028B190D700D04ADC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FB21FC2128B190ED00D04ADC /* PostView.swift */,
+				FB21FC2328B1966E00D04ADC /* MentionView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +314,8 @@
 			files = (
 				FB21FC1028B15C8800D04ADC /* ProfileView.swift in Sources */,
 				FB21FBE328B15A7A00D04ADC /* HomeView.swift in Sources */,
+				FB21FC2228B190ED00D04ADC /* PostView.swift in Sources */,
+				FB21FC2428B1966E00D04ADC /* MentionView.swift in Sources */,
 				FB21FC1628B1600600D04ADC /* TabBarController.swift in Sources */,
 				FB21FC1828B1840500D04ADC /* Post.swift in Sources */,
 				FB21FBDF28B15A7A00D04ADC /* AppDelegate.swift in Sources */,
