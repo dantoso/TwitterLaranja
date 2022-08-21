@@ -7,11 +7,10 @@ struct HomeView: View {
 								  mention: Post(author: User(username: "test2"),
 												content: "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello")),
 							 
-							 Post(author: User(username: "test1"),
+							 Post(author: User(username: "test3"),
 								  content: "heyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyhey!")]
 	
 	var body: some View {
 		PostListView(posts: testPosts)
-			.preferredColorScheme(.dark)
 	}
 }

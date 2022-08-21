@@ -2,18 +2,18 @@ import SwiftUI
 
 struct ProfileView: View {
 	
-	let user = User(username: "Alpha")
+	@State var viewModel = ProfileViewModel(user: User(username: "Alpha"))
 	
 	var body: some View {
 		VStack {
 			HStack {
-				Text(user.username)
+				Text(viewModel.username)
 					.padding([.leading, .top])
-					.font(.title)
+					.font(.largeTitle)
 				Spacer()
 			}
 			HStack {
-				Text("Date joined: \(user.dateJoined)")
+				Text("Date joined: \(viewModel.formmatedDate)")
 					.font(.footnote)
 					.padding([.horizontal])
 				Spacer()
@@ -23,19 +23,19 @@ struct ProfileView: View {
 				.font(.title2)
 				.padding([.top])
 			
-			Text("\(user.postsMade.count) posts")
+			Text("\(viewModel.postsMade.count) posts")
 				.font(.footnote)
 			
 			Button("Write new post") {
 				//TODO: write new post feature
 			}
+			.foregroundColor(Color(uiColor: .systemOrange))
 			.padding()
 			
-			if !user.postsMade.isEmpty {
-				PostListView(posts: user.postsMade)
+			if !viewModel.postsMade.isEmpty {
+				PostListView(posts: viewModel.postsMade)
 			}
 			Spacer()
 		}
-		.preferredColorScheme(.dark)
 	}
 }

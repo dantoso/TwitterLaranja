@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0F259228B24A6800CCE0F1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F259128B24A6800CCE0F1 /* ProfileViewModel.swift */; };
 		FB21FBDF28B15A7A00D04ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */; };
 		FB21FBE128B15A7A00D04ADC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */; };
 		FB21FBE328B15A7A00D04ADC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FBE228B15A7A00D04ADC /* HomeView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB0F259128B24A6800CCE0F1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FB21FBDB28B15A7A00D04ADC /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				FB21FC0F28B15C8800D04ADC /* ProfileView.swift */,
+				FB0F259128B24A6800CCE0F1 /* ProfileViewModel.swift */,
 			);
 			path = ProfileScreen;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				FB21FC2628B1A75B00D04ADC /* PostListView.swift in Sources */,
 				FB21FC1628B1600600D04ADC /* TabBarController.swift in Sources */,
 				FB21FC1828B1840500D04ADC /* Post.swift in Sources */,
+				FB0F259228B24A6800CCE0F1 /* ProfileViewModel.swift in Sources */,
 				FB21FBDF28B15A7A00D04ADC /* AppDelegate.swift in Sources */,
 				FB21FBE128B15A7A00D04ADC /* SceneDelegate.swift in Sources */,
 				FB21FC1A28B184B700D04ADC /* User.swift in Sources */,
