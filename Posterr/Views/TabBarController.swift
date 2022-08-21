@@ -2,8 +2,8 @@ import SwiftUI
 
 final class TabBarController: UITabBarController {
 	
-	lazy var homeCoordinator: HomeCoordinator = HomeCoordinator(navigationController: UINavigationController())
-	lazy var profileCoordinator: ProfileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
+	lazy var homeCoordinator: HomeCoordinator = HomeCoordinator(navigationController: createNavController())
+	lazy var profileCoordinator: ProfileCoordinator = ProfileCoordinator(navigationController: createNavController())
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -19,6 +19,13 @@ final class TabBarController: UITabBarController {
 		tabBar.isTranslucent = false
 		tabBar.backgroundColor = .systemGray6
 		tabBar.tintColor = .systemOrange
+	}
+	
+	func createNavController() -> UINavigationController {
+		let navVC = UINavigationController()
+		navVC.navigationBar.tintColor = .systemOrange
+		
+		return navVC
 	}
 	
 }
