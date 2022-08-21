@@ -11,10 +11,7 @@ struct HomeView: View {
 								  content: "heyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyhey!")]
 	
 	var body: some View {
-		List {
-			ForEach(0..<testPosts.count, id: \.self) { i in
-				PostView(post: testPosts[i])
-			}
-		}
+		PostListView(posts: testPosts)
+			.preferredColorScheme(.dark)
 	}
 }

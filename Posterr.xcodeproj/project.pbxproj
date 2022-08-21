@@ -21,6 +21,7 @@
 		FB21FC1A28B184B700D04ADC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC1928B184B700D04ADC /* User.swift */; };
 		FB21FC2228B190ED00D04ADC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2128B190ED00D04ADC /* PostView.swift */; };
 		FB21FC2428B1966E00D04ADC /* MentionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2328B1966E00D04ADC /* MentionView.swift */; };
+		FB21FC2628B1A75B00D04ADC /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2528B1A75B00D04ADC /* PostListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FB21FC1928B184B700D04ADC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FB21FC2128B190ED00D04ADC /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		FB21FC2328B1966E00D04ADC /* MentionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionView.swift; sourceTree = "<group>"; };
+		FB21FC2528B1A75B00D04ADC /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		FB21FC2028B190D700D04ADC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FB21FC2528B1A75B00D04ADC /* PostListView.swift */,
 				FB21FC2128B190ED00D04ADC /* PostView.swift */,
 				FB21FC2328B1966E00D04ADC /* MentionView.swift */,
 			);
@@ -316,6 +319,7 @@
 				FB21FBE328B15A7A00D04ADC /* HomeView.swift in Sources */,
 				FB21FC2228B190ED00D04ADC /* PostView.swift in Sources */,
 				FB21FC2428B1966E00D04ADC /* MentionView.swift in Sources */,
+				FB21FC2628B1A75B00D04ADC /* PostListView.swift in Sources */,
 				FB21FC1628B1600600D04ADC /* TabBarController.swift in Sources */,
 				FB21FC1828B1840500D04ADC /* Post.swift in Sources */,
 				FB21FBDF28B15A7A00D04ADC /* AppDelegate.swift in Sources */,
