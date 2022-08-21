@@ -8,7 +8,7 @@ struct ProfileView: View {
 	var body: some View {
 		VStack {
 			HStack {
-				Text(viewModel.username)
+				Text(viewModel.user.username)
 					.padding([.leading, .top])
 					.font(.largeTitle)
 				Spacer()
@@ -24,11 +24,11 @@ struct ProfileView: View {
 				.font(.title2)
 				.padding([.top])
 			
-			Text("\(viewModel.postsMade.count) posts")
+			Text("\(viewModel.user.postsMade.count) posts")
 				.font(.footnote)
 			
-			PostListView(posts: viewModel.postsMade) {
-				coordinator.writePost()
+			PostListView(posts: viewModel.user.postsMade) {
+				coordinator.writePost(withAuthor: viewModel.user)
 			}
 			Spacer()
 		}

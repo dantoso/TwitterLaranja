@@ -2,18 +2,9 @@ import Foundation
 
 struct ProfileViewModel {
 	
-	private let user: User
-	
-	var username: String {
-		user.username
-	}
-	var postsMade: [Post] {
-		user.postsMade
-	}
+	let user: User
 	var formmatedDate: String = ""
-	
-	var newPostData = NewPostData()
-	
+		
 	init(user: User) {
 		self.user = user
 		formmatedDate = formatDate()
@@ -24,10 +15,4 @@ struct ProfileViewModel {
 		return user.dateJoined.formatted(date: .long, time: .omitted)
 	}
 	
-}
-
-
-struct NewPostData {
-	var content: String = ""
-	var mention: Post? = nil
 }
