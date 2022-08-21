@@ -14,6 +14,7 @@
 		FB0F259C28B2566100CCE0F1 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F259B28B2566100CCE0F1 /* ProfileCoordinator.swift */; };
 		FB0F259E28B25F2800CCE0F1 /* PostCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F259D28B25F2800CCE0F1 /* PostCreationViewModel.swift */; };
 		FB0F25A128B2729700CCE0F1 /* UserMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F25A028B2729700CCE0F1 /* UserMocks.swift */; };
+		FB0F25A428B27F8600CCE0F1 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F25A328B27F8600CCE0F1 /* UIView+Constraints.swift */; };
 		FB21FBDF28B15A7A00D04ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */; };
 		FB21FBE128B15A7A00D04ADC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */; };
 		FB21FBE328B15A7A00D04ADC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FBE228B15A7A00D04ADC /* HomeView.swift */; };
@@ -56,6 +57,7 @@
 		FB0F259B28B2566100CCE0F1 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		FB0F259D28B25F2800CCE0F1 /* PostCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreationViewModel.swift; sourceTree = "<group>"; };
 		FB0F25A028B2729700CCE0F1 /* UserMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMocks.swift; sourceTree = "<group>"; };
+		FB0F25A328B27F8600CCE0F1 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		FB21FBDB28B15A7A00D04ADC /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,15 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		FB0F25A228B27F4600CCE0F1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FB0F259728B2552A00CCE0F1 /* Coordinator.swift */,
+				FB0F25A328B27F8600CCE0F1 /* UIView+Constraints.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		FB21FBD228B15A7A00D04ADC = {
 			isa = PBXGroup;
 			children = (
@@ -144,8 +155,8 @@
 			children = (
 				FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */,
 				FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */,
-				FB0F259728B2552A00CCE0F1 /* Coordinator.swift */,
 				FB21FBE728B15A7C00D04ADC /* Assets.xcassets */,
+				FB0F25A228B27F4600CCE0F1 /* Shared */,
 				FB0F259F28B2726800CCE0F1 /* Mocks */,
 				FB21FC1B28B1857700D04ADC /* Models */,
 				FB21FC0E28B15C5F00D04ADC /* Views */,
@@ -355,6 +366,7 @@
 				FB21FC1028B15C8800D04ADC /* ProfileView.swift in Sources */,
 				FB21FBE328B15A7A00D04ADC /* HomeView.swift in Sources */,
 				FB0F259828B2552A00CCE0F1 /* Coordinator.swift in Sources */,
+				FB0F25A428B27F8600CCE0F1 /* UIView+Constraints.swift in Sources */,
 				FB0F259528B253BA00CCE0F1 /* PostCreationViewController.swift in Sources */,
 				FB0F25A128B2729700CCE0F1 /* UserMocks.swift in Sources */,
 				FB21FC2228B190ED00D04ADC /* PostView.swift in Sources */,
