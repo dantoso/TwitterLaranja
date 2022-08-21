@@ -25,4 +25,9 @@ final class ProfileCoordinator: Coordinator {
 		return profileVC
 	}
 	
+	func writePost() {
+		let writePostVC = PostCreationViewController()
+		navigationController.pushViewController(writePostVC, animated: true)
+	}
+	
 }

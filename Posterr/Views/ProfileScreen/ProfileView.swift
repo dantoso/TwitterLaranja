@@ -27,14 +27,8 @@ struct ProfileView: View {
 			Text("\(viewModel.postsMade.count) posts")
 				.font(.footnote)
 			
-			Button("Write new post") {
-				//TODO: write new post feature
-			}
-			.foregroundColor(Color(uiColor: .systemOrange))
-			.padding()
-			
-			if !viewModel.postsMade.isEmpty {
-				PostListView(posts: viewModel.postsMade)
+			PostListView(posts: viewModel.postsMade) {
+				coordinator.writePost()
 			}
 			Spacer()
 		}

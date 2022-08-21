@@ -12,6 +12,8 @@ struct HomeView: View {
 								  content: "heyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyhey!")]
 	
 	var body: some View {
-		PostListView(posts: testPosts)
+		PostListView(posts: testPosts) {
+			coordinator.writePost()
+		}
 	}
 }

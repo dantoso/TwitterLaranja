@@ -22,4 +22,9 @@ final class HomeCoordinator: Coordinator {
 		return homeVC
 	}
 	
+	func writePost() {
+		let writePostVC = PostCreationViewController()
+		navigationController.pushViewController(writePostVC, animated: true)
+	}
+	
 }
