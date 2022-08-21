@@ -21,7 +21,6 @@ final class TabBarController: UITabBarController {
 	func createHomeVC() -> UIHostingController<HomeView> {
 		let homeVC = UIHostingController(rootView: HomeView())
 		homeVC.title = "Home"
-		homeVC.view.backgroundColor = .systemBlue
 		homeVC.tabBarItem.image = UIImage(systemName: "house")
 		
 		return homeVC
@@ -30,7 +29,6 @@ final class TabBarController: UITabBarController {
 	func createProfileVC() -> UIHostingController<ProfileView> {
 		let profileVC = UIHostingController(rootView: ProfileView())
 		profileVC.title = "Profile"
-		profileVC.view.backgroundColor = .systemRed
 		profileVC.tabBarItem.image = UIImage(systemName: "person")
 
 		return profileVC
