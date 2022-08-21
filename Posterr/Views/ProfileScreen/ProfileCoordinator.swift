@@ -29,7 +29,7 @@ final class ProfileCoordinator: Coordinator {
 		let viewModel = PostCreationViewModel(author: author)
 		let writePostVC = PostCreationViewController(viewModel: viewModel)
 		
-		navigationController.pushViewController(writePostVC, animated: true)
+		navigationController.present(writePostVC, animated: true)
 	}
 	
 }
