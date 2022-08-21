@@ -13,7 +13,7 @@ struct HomeView: View {
 	
 	var body: some View {
 		PostListView(posts: testPosts) {
-			coordinator.writePost()
+			coordinator.writePost(withAuthor: UserMocks.defaultUser)
 		}
 	}
 }

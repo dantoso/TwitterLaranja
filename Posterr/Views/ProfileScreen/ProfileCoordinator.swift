@@ -15,7 +15,7 @@ final class ProfileCoordinator: Coordinator {
 	}
 	
 	private func createProfileVC() -> UIHostingController<ProfileView> {
-		let user = User(username: "Alpha")
+		let user = UserMocks.defaultUser
 		let viewModel = ProfileViewModel(user: user)
 		
 		let profileVC = UIHostingController(rootView: ProfileView(viewModel: viewModel, coordinator: self))
@@ -25,8 +25,10 @@ final class ProfileCoordinator: Coordinator {
 		return profileVC
 	}
 	
-	func writePost() {
-		let writePostVC = PostCreationViewController()
+	func writePost(withAuthor author: User) {
+		let viewModel = PostCreationViewModel(author: author)
+		let writePostVC = PostCreationViewController(viewModel: viewModel)
+		
 		navigationController.pushViewController(writePostVC, animated: true)
 	}
 	

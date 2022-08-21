@@ -22,8 +22,10 @@ final class HomeCoordinator: Coordinator {
 		return homeVC
 	}
 	
-	func writePost() {
-		let writePostVC = PostCreationViewController()
+	func writePost(withAuthor author: User) {
+		let viewModel = PostCreationViewModel(author: author)
+		let writePostVC = PostCreationViewController(viewModel: viewModel)
+		
 		navigationController.pushViewController(writePostVC, animated: true)
 	}
 	
