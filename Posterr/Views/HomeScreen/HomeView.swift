@@ -2,6 +2,7 @@ import SwiftUI
 
 struct HomeView: View {
 	
+	let coordinator: HomeCoordinator
 	let testPosts: [Post] = [Post(author: User(username: "test1"),
 								  content: "heyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyhey!",
 								  mention: Post(author: User(username: "test2"),

@@ -2,7 +2,8 @@ import SwiftUI
 
 struct ProfileView: View {
 	
-	@State var viewModel = ProfileViewModel(user: User(username: "Alpha"))
+	@State var viewModel: ProfileViewModel
+	let coordinator: ProfileCoordinator
 	
 	var body: some View {
 		VStack {

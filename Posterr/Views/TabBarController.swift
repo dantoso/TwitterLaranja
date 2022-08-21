@@ -2,13 +2,16 @@ import SwiftUI
 
 final class TabBarController: UITabBarController {
 	
+	lazy var homeCoordinator: HomeCoordinator = HomeCoordinator(navigationController: UINavigationController())
+	lazy var profileCoordinator: ProfileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let profileVC = createProfileVC()
-		let homeVC = createHomeVC()
-
-		setViewControllers([homeVC, profileVC], animated: false)
+		homeCoordinator.start()
+		profileCoordinator.start()
+		
+		setViewControllers([homeCoordinator.navigationController, profileCoordinator.navigationController], animated: false)
 		setupTabBar()
 	}
 	
@@ -18,19 +21,4 @@ final class TabBarController: UITabBarController {
 		tabBar.tintColor = .systemOrange
 	}
 	
-	func createHomeVC() -> UIHostingController<HomeView> {
-		let homeVC = UIHostingController(rootView: HomeView())
-		homeVC.title = "Home"
-		homeVC.tabBarItem.image = UIImage(systemName: "house")
-		
-		return homeVC
-	}
-	
-	func createProfileVC() -> UIHostingController<ProfileView> {
-		let profileVC = UIHostingController(rootView: ProfileView())
-		profileVC.title = "Profile"
-		profileVC.tabBarItem.image = UIImage(systemName: "person")
-
-		return profileVC
-	}
 }
