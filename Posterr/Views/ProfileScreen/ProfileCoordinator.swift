@@ -1,6 +1,6 @@
 import SwiftUI
 
-final class ProfileCoordinator: Coordinator {
+final class ProfileCoordinator: Coordinator, ObservableObject {
 	
 	var childCoordinators: [Coordinator] = []
 	var navigationController: UINavigationController
@@ -16,7 +16,7 @@ final class ProfileCoordinator: Coordinator {
 	
 	private func createProfileVC() -> UIHostingController<ProfileView> {
 		let user = UserMocks.defaultUser
-		let viewModel = ProfileViewModel(user: user)
+		let viewModel = ProfileViewModel(username: user.username)
 		
 		let profileVC = UIHostingController(rootView: ProfileView(viewModel: viewModel, coordinator: self))
 		profileVC.title = "Profile"
