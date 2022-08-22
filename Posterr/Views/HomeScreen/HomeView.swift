@@ -2,18 +2,30 @@ import SwiftUI
 
 struct HomeView: View {
 	
+	@State var viewModel = HomeViewModel()
 	let coordinator: HomeCoordinator
-	let testPosts: [Post] = [Post(author: User(username: "test1"),
-								  content: "heyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyhey!",
-								  mention: Post(author: User(username: "test2"),
-												content: "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello")),
-							 
-							 Post(author: User(username: "test3"),
-								  content: "heyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyheyhey!")]
 	
 	var body: some View {
-		PostListView(posts: testPosts) {
-			coordinator.writePost(withAuthor: UserMocks.defaultUser)
+		Group {
+			if let posts = viewModel.posts {
+				PostListView(posts: posts) {
+					coordinator.writePost(withAuthor: UserMocks.defaultUser)
+				}
+			}
+			else {
+				if viewModel.fetchFailed {
+					Text("Failed to load posts.")
+						.font(.headline)
+				}
+				else {
+					Text("Loading posts...")
+						.font(.headline)
+				}
+			}
+		}
+		.onAppear {
+			print("started fetching posts...")
+			viewModel.startFetchPosts()
 		}
 	}
 }
