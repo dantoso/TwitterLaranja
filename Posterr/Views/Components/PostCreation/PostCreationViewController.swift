@@ -90,6 +90,7 @@ final class PostCreationViewController: UIViewController {
 	//MARK: - Button action
 	@objc func didTapPost() {
 		viewModel.post()
+		dismiss(animated: true)
 	}
 	
 
