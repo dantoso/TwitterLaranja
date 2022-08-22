@@ -30,6 +30,7 @@
 		FB21FC2228B190ED00D04ADC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2128B190ED00D04ADC /* PostView.swift */; };
 		FB21FC2428B1966E00D04ADC /* MentionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2328B1966E00D04ADC /* MentionView.swift */; };
 		FB21FC2628B1A75B00D04ADC /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2528B1A75B00D04ADC /* PostListView.swift */; };
+		FB23948A28B3BADF00F7C29D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23948928B3BADF00F7C29D /* Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		FB21FC2128B190ED00D04ADC /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		FB21FC2328B1966E00D04ADC /* MentionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionView.swift; sourceTree = "<group>"; };
 		FB21FC2528B1A75B00D04ADC /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		FB23948928B3BADF00F7C29D /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */,
 				FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */,
 				FB21FBE728B15A7C00D04ADC /* Assets.xcassets */,
+				FB23948828B3B58A00F7C29D /* Service */,
 				FB0F25A228B27F4600CCE0F1 /* Shared */,
 				FB0F259F28B2726800CCE0F1 /* Mocks */,
 				FB21FC1B28B1857700D04ADC /* Models */,
@@ -231,6 +234,14 @@
 				FB21FC2328B1966E00D04ADC /* MentionView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		FB23948828B3B58A00F7C29D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FB23948928B3BADF00F7C29D /* Services.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +384,7 @@
 				FB0F259A28B255C700CCE0F1 /* HomeCoordinator.swift in Sources */,
 				FB21FC2428B1966E00D04ADC /* MentionView.swift in Sources */,
 				FB21FC2628B1A75B00D04ADC /* PostListView.swift in Sources */,
+				FB23948A28B3BADF00F7C29D /* Services.swift in Sources */,
 				FB21FC1628B1600600D04ADC /* TabBarController.swift in Sources */,
 				FB21FC1828B1840500D04ADC /* Post.swift in Sources */,
 				FB0F259228B24A6800CCE0F1 /* ProfileViewModel.swift in Sources */,
