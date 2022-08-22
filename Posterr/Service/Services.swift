@@ -8,8 +8,8 @@ protocol PostFetchService {
 	func fetchAllPosts(completion: @escaping (Result<[User], Error>) -> Void)
 }
 
-protocol PostSendService {
+protocol PostService {
 	func post(_ post: Post, completion: @escaping (Result<[User], Error>) -> Void)
 }
 
-protocol PosterrService: PostSendService, UserFetchService, PostFetchService {}
+protocol PosterrService: PostService, UserFetchService, PostFetchService {}
