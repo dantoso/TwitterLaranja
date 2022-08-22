@@ -5,11 +5,11 @@ protocol UserFetchService {
 }
 
 protocol PostFetchService {
-	func fetchAllPosts(completion: @escaping (Result<[User], Error>) -> Void)
+	func fetchAllPosts(completion: @escaping (Result<[Post], Error>) -> Void)
 }
 
 protocol PostService {
 	func post(_ post: Post, completion: @escaping (Result<[User], Error>) -> Void)
 }
 
-protocol PosterrService: PostService, UserFetchService, PostFetchService {}
+protocol PosterrServices: PostService, UserFetchService, PostFetchService {}
