@@ -10,7 +10,7 @@ final class PostCreationViewController: UIViewController {
 	init(viewModel: PostCreationViewModel) {
 		self.viewModel = viewModel
 		super.init(nibName: nil, bundle: nil)
-		title = "\(viewModel.author.username)'s new post"
+		title = "New Post"
 	}
 	
 	override func viewDidLoad() {

@@ -3,19 +3,22 @@ import UIKit
 final class PostCreationViewModel: NSObject, UITextViewDelegate {
 	
 	let textLimit = 777
-	weak var author: User!
-	var postData = NewPostData()
+	private weak var author: User!
+	private var postData = NewPostData()
+	private var service: PostService
+	
 	weak var counterLabel: UILabel?
 	weak var postButton: UIButton?
 	
-	init(author: User, mention: Post? = nil) {
+	init(author: User, mention: Post? = nil, service: PostService = PosterrAPI()) {
 		self.author = author
 		self.postData.mention = mention
+		self.service = service
 	}
 	
 	func post() {
-		// TODO: implement post
-//		let post = Post(author: author, content: postData.content, mention: postData.mention)
+		let newPost = Post(author: author, content: postData.content, mention: postData.mention)
+		service.post(newPost)
 	}
 	
 	
