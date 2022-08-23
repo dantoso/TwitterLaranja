@@ -20,9 +20,7 @@ struct ProfilePostsView: View {
 			Text(" \(viewModel.user.quotePostsMade.count) quote posts")
 				.font(.footnote)
 			
-			PostListView(posts: viewModel.allUserPosts()) {
-				coordinator.writePost(withAuthor: viewModel.user)
-			}
+			PostListView(posts: viewModel.allUserPosts(), user: viewModel.user, coordinator: coordinator)
 		}
 	}
 	

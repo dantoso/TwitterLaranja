@@ -3,6 +3,8 @@ import SwiftUI
 struct PostView: View {
 	
 	let post: Post
+	let repostAction: () -> Void
+	let quotePostAction: () -> Void
 	
 	var body: some View {
 		VStack {
@@ -27,6 +29,16 @@ struct PostView: View {
 			
 			if let mention = post.mention {
 				MentionView(post: mention)
+			}
+			
+			HStack {
+				Button("Repost", action: repostAction)
+					.foregroundColor(Color(uiColor: .systemOrange))
+				
+				Spacer()
+				
+				Button("Quote post", action: quotePostAction)
+					.foregroundColor(Color(uiColor: .systemOrange))
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 import SwiftUI
 
-final class ProfileCoordinator: Coordinator {
+final class ProfileCoordinator: PostWriterCoordinator {
 	
 	var childCoordinators: [Coordinator] = []
 	var navigationController: UINavigationController
@@ -23,13 +23,6 @@ final class ProfileCoordinator: Coordinator {
 		profileVC.tabBarItem.image = UIImage(systemName: "person")
 
 		return profileVC
-	}
-	
-	func writePost(withAuthor author: User) {
-		let viewModel = PostCreationViewModel(author: author)
-		let writePostVC = PostCreationViewController(viewModel: viewModel)
-		
-		navigationController.present(writePostVC, animated: true)
 	}
 	
 }

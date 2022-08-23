@@ -8,9 +8,7 @@ struct HomeView: View {
 	var body: some View {
 		Group {
 			if let posts = viewModel.posts {
-				PostListView(posts: posts) {
-					coordinator.writePost(withAuthor: DatabaseMock.defaultUser)
-				}
+				PostListView(posts: posts, user: DatabaseMock.defaultUser, coordinator: coordinator)
 			}
 			else {
 				if viewModel.fetchFailed {

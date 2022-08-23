@@ -1,6 +1,6 @@
 import SwiftUI
 
-final class HomeCoordinator: Coordinator {
+final class HomeCoordinator: PostWriterCoordinator {
 	
 	var childCoordinators: [Coordinator] = []
 	var navigationController: UINavigationController
@@ -20,13 +20,6 @@ final class HomeCoordinator: Coordinator {
 		homeVC.tabBarItem.image = UIImage(systemName: "house")
 
 		return homeVC
-	}
-	
-	func writePost(withAuthor author: User) {
-		let viewModel = PostCreationViewModel(author: author)
-		let writePostVC = PostCreationViewController(viewModel: viewModel)
-		
-		navigationController.present(writePostVC, animated: true)
 	}
 	
 }
