@@ -4,6 +4,7 @@ final class HomeCoordinator: PostWriterCoordinator {
 	
 	var childCoordinators: [Coordinator] = []
 	var navigationController: UINavigationController
+	let homeViewModel = HomeViewModel()
 	
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
@@ -15,11 +16,16 @@ final class HomeCoordinator: PostWriterCoordinator {
 	}
 	
 	private func createHomeVC() -> UIHostingController<HomeView> {
-		let homeVC = UIHostingController(rootView: HomeView(coordinator: self))
+		let homeVC = UIHostingController(rootView: HomeView(viewModel: homeViewModel, coordinator: self))
 		homeVC.title = "Home"
 		homeVC.tabBarItem.image = UIImage(systemName: "house")
 
 		return homeVC
+	}
+	
+	func dismissPostCreationViewController(_ viewController: PostCreationViewController) {
+		homeViewModel.startFetchPosts()
+		viewController.dismiss(animated: true)
 	}
 	
 }

@@ -2,8 +2,13 @@ import SwiftUI
 
 struct HomeView: View {
 	
-	@StateObject var viewModel = HomeViewModel()
+	@ObservedObject var viewModel: HomeViewModel
 	let coordinator: HomeCoordinator
+	
+	init(viewModel: HomeViewModel, coordinator: HomeCoordinator) {
+		self.viewModel = viewModel
+		self.coordinator = coordinator
+	}
 	
 	var body: some View {
 		Group {
@@ -22,7 +27,6 @@ struct HomeView: View {
 			}
 		}
 		.onAppear {
-			print("started fetching posts...")
 			viewModel.startFetchPosts()
 		}
 	}

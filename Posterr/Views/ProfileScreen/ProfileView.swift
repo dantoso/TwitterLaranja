@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ProfileView: View {
 	
-	@ObservedObject var viewModel: ProfileViewModel
+	@StateObject var viewModel = ProfileViewModel()
 	let coordinator: ProfileCoordinator
 	
 	var body: some View {

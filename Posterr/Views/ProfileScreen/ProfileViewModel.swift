@@ -5,7 +5,7 @@ final class ProfileViewModel: ObservableObject {
 	@Published var user: User
 	lazy var formmatedDate: String = formatDate(user.dateJoined)
 			
-	init(user: User) {
+	init(user: User = DatabaseMock.defaultUser) {
 		self.user = user
 	}
 	

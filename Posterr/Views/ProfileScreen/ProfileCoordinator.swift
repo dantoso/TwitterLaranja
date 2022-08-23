@@ -15,14 +15,15 @@ final class ProfileCoordinator: PostWriterCoordinator {
 	}
 	
 	private func createProfileVC() -> UIHostingController<ProfileView> {
-		let user = DatabaseMock.defaultUser
-		let viewModel = ProfileViewModel(user: user)
-		
-		let profileVC = UIHostingController(rootView: ProfileView(viewModel: viewModel, coordinator: self))
+		let profileVC = UIHostingController(rootView: ProfileView(coordinator: self))
 		profileVC.title = "Profile"
 		profileVC.tabBarItem.image = UIImage(systemName: "person")
 
 		return profileVC
+	}
+	
+	func dismissPostCreationViewController(_ viewController: PostCreationViewController) {
+		viewController.dismiss(animated: true)
 	}
 	
 }

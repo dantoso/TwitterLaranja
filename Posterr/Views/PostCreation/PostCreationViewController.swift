@@ -3,11 +3,14 @@ import UIKit
 final class PostCreationViewController: UIViewController {
 	
 	var viewModel: PostCreationViewModel
+	let coordinator: PostWriterCoordinator
+	
 	private lazy var postButton: UIButton = createPostButton()
 	private lazy var textView: UITextView = createTextView()
 	private lazy var counterLabel: UILabel = createCounterLabel()
 	
-	init(viewModel: PostCreationViewModel) {
+	init(viewModel: PostCreationViewModel, coordinator: PostWriterCoordinator) {
+		self.coordinator = coordinator
 		self.viewModel = viewModel
 		super.init(nibName: nil, bundle: nil)
 		title = "New Post"
@@ -90,7 +93,7 @@ final class PostCreationViewController: UIViewController {
 	//MARK: - Button action
 	@objc func didTapPost() {
 		viewModel.post()
-		dismiss(animated: true)
+		coordinator.dismissPostCreationViewController(self)
 	}
 	
 
