@@ -13,10 +13,15 @@ struct PostView: View {
 			}
 			
 			HStack {
-				Text(post.content)
-					.padding([.leading])
-					.font(.body)
-	
+				if post.content.isEmpty {
+					EmptyView()
+				}
+				else {
+					Text(post.content)
+						.padding([.leading])
+						.font(.body)
+				}
+				
 				Spacer()
 			}
 			
