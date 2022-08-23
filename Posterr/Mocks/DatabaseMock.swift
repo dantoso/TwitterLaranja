@@ -41,7 +41,10 @@ struct DatabaseMock {
 	}
 	
 	static func addPost(_ post: Post) {
-		guard let user = users[post.authorName] else {return}
+		guard let user = users[post.authorName] else {
+			print("something went VERY wrong")
+			return
+		}
 		
 		if post.mention == nil {
 			user.originalPostsMade.append(post)

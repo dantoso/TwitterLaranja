@@ -11,6 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		window = UIWindow(windowScene: scene)
 		let tabController = TabBarController()
 		window?.rootViewController = tabController
+		window?.overrideUserInterfaceStyle = .dark
 		window?.makeKeyAndVisible()
 		
 	}

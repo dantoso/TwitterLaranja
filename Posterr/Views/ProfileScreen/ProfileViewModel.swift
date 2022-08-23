@@ -14,7 +14,7 @@ final class ProfileViewModel: ObservableObject {
 	}
 	
 	private func formatDate(_ date: Date) -> String {
-		// TODO: implement correct format
+		// TODO: implement correct format: "Month day, year"
 		return date.formatted(date: .long, time: .omitted)
 	}
 	

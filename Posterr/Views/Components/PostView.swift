@@ -22,9 +22,9 @@ struct PostView: View {
 					Text(post.content)
 						.padding([.leading])
 						.font(.body)
+					Spacer()
 				}
 				
-				Spacer()
 			}
 			
 			if let mention = post.mention {
