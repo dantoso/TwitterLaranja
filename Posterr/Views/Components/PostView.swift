@@ -33,11 +33,15 @@ struct PostView: View {
 			
 			HStack {
 				Button("Repost", action: repostAction)
+					.padding([.top])
+					.buttonStyle(.borderless)
 					.foregroundColor(Color(uiColor: .systemOrange))
 				
 				Spacer()
 				
 				Button("Quote post", action: quotePostAction)
+					.padding([.top])
+					.buttonStyle(.borderless)
 					.foregroundColor(Color(uiColor: .systemOrange))
 			}
 		}
