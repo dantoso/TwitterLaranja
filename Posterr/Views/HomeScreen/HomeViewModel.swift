@@ -7,7 +7,7 @@ final class HomeViewModel: ObservableObject {
 	
 	let service: PostFetchService
 	
-	init(service: PostFetchService = PosterrAPI()) {
+	init(service: PostFetchService = PosterrAPIService()) {
 		self.service = service
 	}
 	

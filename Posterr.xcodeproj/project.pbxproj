@@ -32,7 +32,7 @@
 		FB21FC2628B1A75B00D04ADC /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2528B1A75B00D04ADC /* PostListView.swift */; };
 		FB224C8528B46CC800E994EF /* ProfilePostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB224C8428B46CC800E994EF /* ProfilePostsView.swift */; };
 		FB23948A28B3BADF00F7C29D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23948928B3BADF00F7C29D /* Services.swift */; };
-		FB23948C28B3C59B00F7C29D /* PosterrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23948B28B3C59B00F7C29D /* PosterrAPI.swift */; };
+		FB23948C28B3C59B00F7C29D /* PosterrAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23948B28B3C59B00F7C29D /* PosterrAPIService.swift */; };
 		FB23948E28B3C8C000F7C29D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23948D28B3C8C000F7C29D /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +83,7 @@
 		FB21FC2528B1A75B00D04ADC /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		FB224C8428B46CC800E994EF /* ProfilePostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostsView.swift; sourceTree = "<group>"; };
 		FB23948928B3BADF00F7C29D /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
-		FB23948B28B3C59B00F7C29D /* PosterrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrAPI.swift; sourceTree = "<group>"; };
+		FB23948B28B3C59B00F7C29D /* PosterrAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrAPIService.swift; sourceTree = "<group>"; };
 		FB23948D28B3C8C000F7C29D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,9 +164,9 @@
 				FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */,
 				FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */,
 				FB21FBE728B15A7C00D04ADC /* Assets.xcassets */,
+				FB0F259F28B2726800CCE0F1 /* Mocks */,
 				FB0F25A228B27F4600CCE0F1 /* Shared */,
 				FB23948828B3B58A00F7C29D /* Service */,
-				FB0F259F28B2726800CCE0F1 /* Mocks */,
 				FB21FC1B28B1857700D04ADC /* Models */,
 				FB21FC0E28B15C5F00D04ADC /* Views */,
 				FB21FBE928B15A7C00D04ADC /* LaunchScreen.storyboard */,
@@ -256,7 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				FB23948928B3BADF00F7C29D /* Services.swift */,
-				FB23948B28B3C59B00F7C29D /* PosterrAPI.swift */,
+				FB23948B28B3C59B00F7C29D /* PosterrAPIService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -395,7 +395,7 @@
 				FB21FBE328B15A7A00D04ADC /* HomeView.swift in Sources */,
 				FB0F259828B2552A00CCE0F1 /* Coordinator.swift in Sources */,
 				FB0F25A428B27F8600CCE0F1 /* UIView+Constraints.swift in Sources */,
-				FB23948C28B3C59B00F7C29D /* PosterrAPI.swift in Sources */,
+				FB23948C28B3C59B00F7C29D /* PosterrAPIService.swift in Sources */,
 				FB0F259528B253BA00CCE0F1 /* PostCreationViewController.swift in Sources */,
 				FB224C8528B46CC800E994EF /* ProfilePostsView.swift in Sources */,
 				FB0F25A128B2729700CCE0F1 /* DatabaseMock.swift in Sources */,
