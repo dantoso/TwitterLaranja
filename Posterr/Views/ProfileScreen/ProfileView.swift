@@ -16,8 +16,10 @@ struct ProfileView: View {
 					Text("Error: username given does not correspond to any existing user")
 						.font(.headline)
 				}
-				Text("Loading user...")
-					.font(.headline)
+				else {
+					Text("Loading profile...")
+						.font(.headline)
+				}
 			}
 		}
 		.onAppear {
