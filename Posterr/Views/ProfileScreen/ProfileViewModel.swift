@@ -2,7 +2,18 @@ import Foundation
 
 final class ProfileViewModel: ObservableObject {
 	
-	@Published var user: User
+	@Published var user: User {
+		didSet {
+			originalPosts = user.originalPosts
+			reposts = user.reposts
+			quotePosts = user.quotePosts
+		}
+	}
+	
+	@Published var originalPosts: [Post] = []
+	@Published var reposts: [Post] = []
+	@Published var quotePosts: [Post] = []
+	
 	lazy var formmatedDate: String = formatDate(user.dateJoined)
 			
 	init(user: User = DatabaseMock.defaultUser) {

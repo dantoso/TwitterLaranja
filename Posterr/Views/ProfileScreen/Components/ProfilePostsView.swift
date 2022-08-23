@@ -12,14 +12,17 @@ struct ProfilePostsView: View {
 				HStack {
 					VStack {
 						Text("Original posts")
-						Text("\(viewModel.user.originalPosts.count) original posts")
+						Text("\(viewModel.originalPosts.count) original posts")
 							.font(.footnote)
 					}
 					.padding()
 					Spacer()
 				}
 				
-				PostListView(posts: viewModel.user.originalPosts, user: viewModel.user, coordinator: coordinator)
+				PostListView(posts: viewModel.originalPosts, user: viewModel.user, coordinator: coordinator)
+					.onAppear {
+						viewModel.user = DatabaseMock.defaultUser
+					}
 			}
 			
 			// reposts
@@ -27,13 +30,16 @@ struct ProfilePostsView: View {
 				HStack {
 					VStack {
 						Text("Reposts")
-						Text(" \(viewModel.user.reposts.count) reposts")
+						Text(" \(viewModel.reposts.count) reposts")
 							.font(.footnote)
 					}
 					.padding()
 					Spacer()
 				}
-				PostListView(posts: viewModel.user.reposts, user: viewModel.user, coordinator: coordinator)
+				PostListView(posts: viewModel.reposts, user: viewModel.user, coordinator: coordinator)
+					.onAppear {
+						viewModel.user = DatabaseMock.defaultUser
+					}
 			}
 			
 			// quote posts
@@ -41,13 +47,16 @@ struct ProfilePostsView: View {
 				HStack {
 					VStack {
 						Text("Quote posts")
-						Text(" \(viewModel.user.quotePosts.count) quote posts")
+						Text(" \(viewModel.quotePosts.count) quote posts")
 							.font(.footnote)
 					}
 					.padding()
 					Spacer()
 				}
-				PostListView(posts: viewModel.user.quotePosts, user: viewModel.user, coordinator: coordinator)
+				PostListView(posts: viewModel.quotePosts, user: viewModel.user, coordinator: coordinator)
+					.onAppear {
+						viewModel.user = DatabaseMock.defaultUser
+					}
 			}
 			
 		}
