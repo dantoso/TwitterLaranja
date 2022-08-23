@@ -3,11 +3,16 @@ import Foundation
 final class User: Codable {
 	let username: String
 	let dateJoined: Date
-	var postsMade: [Post]
 	
-	init(username: String, posts: [Post] = []) {
+	var repostsMade: [Post]
+	var quotePostsMade: [Post]
+	var originalPostsMade: [Post]
+	
+	init(username: String, originalPosts: [Post] = [], reposts: [Post] = [], quotePosts: [Post] = []) {
 		self.username = username
 		self.dateJoined = Date()
-		self.postsMade = posts
+		self.originalPostsMade = originalPosts
+		self.repostsMade = reposts
+		self.quotePostsMade = quotePosts
 	}
 }
