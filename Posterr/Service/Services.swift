@@ -1,11 +1,11 @@
 import Foundation
 
-protocol PostFetchService {
+protocol FetchPostsService {
 	func fetchAllPosts(completion: @escaping (Result<[Post], Error>) -> Void)
 }
 
-protocol PostService {
+protocol UploadPostService {
 	func uploadPost(_ post: Post)
 }
 
-protocol PosterrServices: PostService, PostFetchService {}
+protocol PosterrServices: UploadPostService, FetchPostsService {}

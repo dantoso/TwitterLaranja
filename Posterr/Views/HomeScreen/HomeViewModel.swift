@@ -5,9 +5,9 @@ final class HomeViewModel: ObservableObject {
 	@Published var posts: [Post]? = nil
 	@Published var fetchFailed = false
 	
-	let service: PostFetchService
+	let service: FetchPostsService
 	
-	init(service: PostFetchService = PosterrAPIService()) {
+	init(service: FetchPostsService = PosterrAPIService()) {
 		self.service = service
 	}
 	
