@@ -13,7 +13,7 @@
 		FB0F259A28B255C700CCE0F1 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F259928B255C700CCE0F1 /* HomeCoordinator.swift */; };
 		FB0F259C28B2566100CCE0F1 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F259B28B2566100CCE0F1 /* ProfileCoordinator.swift */; };
 		FB0F259E28B25F2800CCE0F1 /* PostCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F259D28B25F2800CCE0F1 /* PostCreationViewModel.swift */; };
-		FB0F25A128B2729700CCE0F1 /* UserMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F25A028B2729700CCE0F1 /* UserMocks.swift */; };
+		FB0F25A128B2729700CCE0F1 /* DatabaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F25A028B2729700CCE0F1 /* DatabaseMock.swift */; };
 		FB0F25A428B27F8600CCE0F1 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F25A328B27F8600CCE0F1 /* UIView+Constraints.swift */; };
 		FB21FBDF28B15A7A00D04ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */; };
 		FB21FBE128B15A7A00D04ADC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */; };
@@ -59,7 +59,7 @@
 		FB0F259928B255C700CCE0F1 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		FB0F259B28B2566100CCE0F1 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		FB0F259D28B25F2800CCE0F1 /* PostCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreationViewModel.swift; sourceTree = "<group>"; };
-		FB0F25A028B2729700CCE0F1 /* UserMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMocks.swift; sourceTree = "<group>"; };
+		FB0F25A028B2729700CCE0F1 /* DatabaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseMock.swift; sourceTree = "<group>"; };
 		FB0F25A328B27F8600CCE0F1 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		FB21FBDB28B15A7A00D04ADC /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		FB0F259F28B2726800CCE0F1 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				FB0F25A028B2729700CCE0F1 /* UserMocks.swift */,
+				FB0F25A028B2729700CCE0F1 /* DatabaseMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -162,8 +162,8 @@
 				FB21FBDE28B15A7A00D04ADC /* AppDelegate.swift */,
 				FB21FBE028B15A7A00D04ADC /* SceneDelegate.swift */,
 				FB21FBE728B15A7C00D04ADC /* Assets.xcassets */,
-				FB23948828B3B58A00F7C29D /* Service */,
 				FB0F25A228B27F4600CCE0F1 /* Shared */,
+				FB23948828B3B58A00F7C29D /* Service */,
 				FB0F259F28B2726800CCE0F1 /* Mocks */,
 				FB21FC1B28B1857700D04ADC /* Models */,
 				FB21FC0E28B15C5F00D04ADC /* Views */,
@@ -386,7 +386,7 @@
 				FB0F25A428B27F8600CCE0F1 /* UIView+Constraints.swift in Sources */,
 				FB23948C28B3C59B00F7C29D /* PosterrAPI.swift in Sources */,
 				FB0F259528B253BA00CCE0F1 /* PostCreationViewController.swift in Sources */,
-				FB0F25A128B2729700CCE0F1 /* UserMocks.swift in Sources */,
+				FB0F25A128B2729700CCE0F1 /* DatabaseMock.swift in Sources */,
 				FB21FC2228B190ED00D04ADC /* PostView.swift in Sources */,
 				FB0F259A28B255C700CCE0F1 /* HomeCoordinator.swift in Sources */,
 				FB21FC2428B1966E00D04ADC /* MentionView.swift in Sources */,

@@ -9,7 +9,7 @@ struct HomeView: View {
 		Group {
 			if let posts = viewModel.posts {
 				PostListView(posts: posts) {
-					coordinator.writePost(withAuthor: UserMocks.defaultUser)
+					coordinator.writePost(withAuthor: DatabaseMock.defaultUser)
 				}
 			}
 			else {
