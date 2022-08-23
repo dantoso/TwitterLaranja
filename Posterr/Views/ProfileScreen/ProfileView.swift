@@ -20,7 +20,7 @@ struct ProfileView: View {
 				Spacer()
 			}
 			
-			ProfilePostsView(viewModel: ProfilePostsViewModel(profileViewModel: viewModel), coordinator: coordinator)
+			ProfilePostsView(viewModel: viewModel, coordinator: coordinator)
 			
 			Spacer()
 		}

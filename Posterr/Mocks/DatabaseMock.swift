@@ -2,7 +2,7 @@ import Foundation
 
 struct DatabaseMock {
 	
-	static var defaultUser = users[usernames[3]]!
+	static var defaultUser: User { users[usernames[3]]! }
 	static private var posts: [Post] = createFakePosts()
 	
 	static private let usernames: [String] = ["alpha", "beta", "teta", "omega"]
@@ -17,20 +17,20 @@ struct DatabaseMock {
 		// posting
 		for (username, user) in users {
 			let post = Post(author: user, content: "hey, I'm \(username)!")
-			user.originalPostsMade.append(post)
+			user.originalPosts.append(post)
 			posts.append(post)
 		}
 		
 		// quote posting
 		for (username, user) in users {
 			let post = Post(author: user, content: "hey \(posts.last!.authorName), I'm \(username)!", mention: posts.last)
-			user.quotePostsMade.append(post)
+			user.quotePosts.append(post)
 			posts.append(post)
 		}
 		
 		// reposting a quote post
 		let repost = Post(author: defaultUser, content: "", mention: posts[5])
-		defaultUser.repostsMade.append(repost)
+		defaultUser.reposts.append(repost)
 		posts.append(repost)
 		
 		return posts
@@ -41,19 +41,16 @@ struct DatabaseMock {
 	}
 	
 	static func addPost(_ post: Post) {
-		guard let user = users[post.authorName] else {
-			print("something went VERY wrong")
-			return
-		}
+		guard let user = users[post.authorName] else {return}
 		
 		if post.mention == nil {
-			user.originalPostsMade.append(post)
+			user.originalPosts.append(post)
 		}
 		else if post.content.isEmpty {
-			user.repostsMade.append(post)
+			user.reposts.append(post)
 		}
 		else {
-			user.quotePostsMade.append(post)
+			user.quotePosts.append(post)
 		}
 		
 		posts.append(post)
