@@ -14,7 +14,7 @@ struct PostListView: View {
 			}
 			.foregroundColor(Color(uiColor: .systemOrange))
 			
-			ForEach(0..<posts.count, id: \.self) { i in
+			ForEach((0..<posts.count).reversed(), id: \.self) { i in
 				PostView(post: posts[i]) {
 					coordinator.writeRepost(withAuthor: user, mentioning: posts[i])
 				} quotePostAction: {
