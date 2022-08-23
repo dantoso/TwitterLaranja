@@ -16,7 +16,7 @@ final class ProfileCoordinator: Coordinator, ObservableObject {
 	
 	private func createProfileVC() -> UIHostingController<ProfileView> {
 		let user = DatabaseMock.defaultUser
-		let viewModel = ProfileViewModel(username: user.username)
+		let viewModel = ProfileViewModel(user: user)
 		
 		let profileVC = UIHostingController(rootView: ProfileView(viewModel: viewModel, coordinator: self))
 		profileVC.title = "Profile"

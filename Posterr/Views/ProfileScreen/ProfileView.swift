@@ -6,25 +6,8 @@ struct ProfileView: View {
 	let coordinator: ProfileCoordinator
 	
 	var body: some View {
-		Group {
-			if let user = viewModel.user {
-				ProfileExistsView(user: user, formmatedDate: viewModel.formmatedDate)
-					.environmentObject(coordinator)
-			}
-			else {
-				if viewModel.failedFetch {
-					Text("Error: username given does not correspond to any existing user")
-						.font(.headline)
-				}
-				else {
-					Text("Loading profile...")
-						.font(.headline)
-				}
-			}
-		}
-		.onAppear {
-			viewModel.fetchUser()
-		}
+		ProfileExistsView(user: viewModel.user, formmatedDate: viewModel.formmatedDate)
+			.environmentObject(coordinator)
 	}
 }
 
