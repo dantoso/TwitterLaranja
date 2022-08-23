@@ -11,14 +11,48 @@ struct DatabaseMock {
 												usernames[2]: User(username: usernames[2]),
 												usernames[3]: User(username: usernames[3])]
 	
-
 	static private func createFakePosts() -> [Post] {
-		let posts = [Post]()
+		var posts = [Post]()
 		
-//		for i in 0...3 {
-//			let userPosts = [Post(author: users[i], content: "hey there"), Post(author: users[i], content: "oh, hi!", mention: <#T##Post?#>)]
-//		}
-//
+		// posting
+		for (username, user) in users {
+			let post = Post(author: user, content: "hey, I'm \(username)!")
+			user.originalPostsMade.append(post)
+			posts.append(post)
+		}
+		
+		// quote posting
+		for (username, user) in users {
+			let post = Post(author: user, content: "hey \(posts.last!.authorName), I'm \(username)!", mention: posts.last)
+			user.quotePostsMade.append(post)
+			posts.append(post)
+		}
+		
+		// reposting a quote post
+		let repost = Post(author: defaultUser, content: "", mention: posts[5])
+		defaultUser.repostsMade.append(repost)
+		posts.append(repost)
+		
 		return posts
+	}
+	
+	static func getAllPosts() -> [Post] {
+		return posts
+	}
+	
+	static func addPost(_ post: Post) {
+		guard let user = users[post.authorName] else {return}
+		
+		if post.mention == nil {
+			user.originalPostsMade.append(post)
+		}
+		else if post.content.isEmpty {
+			user.repostsMade.append(post)
+		}
+		else {
+			user.quotePostsMade.append(post)
+		}
+		
+		posts.append(post)
 	}
 }
