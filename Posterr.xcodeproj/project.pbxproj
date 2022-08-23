@@ -30,6 +30,7 @@
 		FB21FC2228B190ED00D04ADC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2128B190ED00D04ADC /* PostView.swift */; };
 		FB21FC2428B1966E00D04ADC /* MentionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2328B1966E00D04ADC /* MentionView.swift */; };
 		FB21FC2628B1A75B00D04ADC /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21FC2528B1A75B00D04ADC /* PostListView.swift */; };
+		FB224C8528B46CC800E994EF /* ProfilePostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB224C8428B46CC800E994EF /* ProfilePostsView.swift */; };
 		FB23948A28B3BADF00F7C29D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23948928B3BADF00F7C29D /* Services.swift */; };
 		FB23948C28B3C59B00F7C29D /* PosterrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23948B28B3C59B00F7C29D /* PosterrAPI.swift */; };
 		FB23948E28B3C8C000F7C29D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23948D28B3C8C000F7C29D /* HomeViewModel.swift */; };
@@ -80,6 +81,7 @@
 		FB21FC2128B190ED00D04ADC /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		FB21FC2328B1966E00D04ADC /* MentionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionView.swift; sourceTree = "<group>"; };
 		FB21FC2528B1A75B00D04ADC /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		FB224C8428B46CC800E994EF /* ProfilePostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostsView.swift; sourceTree = "<group>"; };
 		FB23948928B3BADF00F7C29D /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		FB23948B28B3C59B00F7C29D /* PosterrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrAPI.swift; sourceTree = "<group>"; };
 		FB23948D28B3C8C000F7C29D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		FB21FC1228B15D7F00D04ADC /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
+				FB224C8628B46CCD00E994EF /* Components */,
 				FB0F259B28B2566100CCE0F1 /* ProfileCoordinator.swift */,
 				FB21FC0F28B15C8800D04ADC /* ProfileView.swift */,
 				FB0F259128B24A6800CCE0F1 /* ProfileViewModel.swift */,
@@ -237,6 +240,14 @@
 				FB21FC2528B1A75B00D04ADC /* PostListView.swift */,
 				FB21FC2128B190ED00D04ADC /* PostView.swift */,
 				FB21FC2328B1966E00D04ADC /* MentionView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FB224C8628B46CCD00E994EF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FB224C8428B46CC800E994EF /* ProfilePostsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -386,6 +397,7 @@
 				FB0F25A428B27F8600CCE0F1 /* UIView+Constraints.swift in Sources */,
 				FB23948C28B3C59B00F7C29D /* PosterrAPI.swift in Sources */,
 				FB0F259528B253BA00CCE0F1 /* PostCreationViewController.swift in Sources */,
+				FB224C8528B46CC800E994EF /* ProfilePostsView.swift in Sources */,
 				FB0F25A128B2729700CCE0F1 /* DatabaseMock.swift in Sources */,
 				FB21FC2228B190ED00D04ADC /* PostView.swift in Sources */,
 				FB0F259A28B255C700CCE0F1 /* HomeCoordinator.swift in Sources */,

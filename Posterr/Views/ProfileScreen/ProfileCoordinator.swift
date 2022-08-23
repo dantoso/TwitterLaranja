@@ -1,6 +1,6 @@
 import SwiftUI
 
-final class ProfileCoordinator: Coordinator, ObservableObject {
+final class ProfileCoordinator: Coordinator {
 	
 	var childCoordinators: [Coordinator] = []
 	var navigationController: UINavigationController

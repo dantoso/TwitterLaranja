@@ -9,6 +9,10 @@ final class ProfileViewModel: ObservableObject {
 		self.user = user
 	}
 	
+	func allUserPosts() -> [Post] {
+		return user.originalPostsMade + user.repostsMade + user.quotePostsMade
+	}
+	
 	private func formatDate(_ date: Date) -> String {
 		// TODO: implement correct format
 		return date.formatted(date: .long, time: .omitted)
