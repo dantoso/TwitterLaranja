@@ -2,7 +2,7 @@ import SwiftUI
 
 struct HomeView: View {
 	
-	@State var viewModel = HomeViewModel()
+	@StateObject var viewModel = HomeViewModel()
 	let coordinator: HomeCoordinator
 	
 	var body: some View {
