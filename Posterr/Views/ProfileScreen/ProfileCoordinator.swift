@@ -23,9 +23,8 @@ final class ProfileCoordinator: PostWriterCoordinator {
 		return profileVC
 	}
 	
-	func dismissPostCreationViewController(_ viewController: PostCreationViewController) {
+	func updatePostFeed() {
 		profileViewModel.user = DatabaseMock.defaultUser
-		viewController.dismiss(animated: true)
 	}
 	
 }

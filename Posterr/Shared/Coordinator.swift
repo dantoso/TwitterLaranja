@@ -12,6 +12,7 @@ protocol PostWriterCoordinator: Coordinator {
 	func writeRepost(withAuthor author: User, mentioning post: Post)
 	func writeQuotePost(withAuthor author: User, mentioning post: Post)
 	func dismissPostCreationViewController(_ viewController: PostCreationViewController)
+	func updatePostFeed()
 	
 }
 
@@ -33,6 +34,7 @@ extension PostWriterCoordinator {
 									  preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Repost", style: .default, handler: { _ in
 			viewModel.post()
+			updatePostFeed()
 		}))
 		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 		
@@ -44,6 +46,11 @@ extension PostWriterCoordinator {
 		let writePostVC = PostCreationViewController(viewModel: viewModel, coordinator: self)
 		
 		navigationController.present(writePostVC, animated: true)
+	}
+	
+	func dismissPostCreationViewController(_ viewController: PostCreationViewController) {
+		updatePostFeed()
+		viewController.dismiss(animated: true)
 	}
 	
 }

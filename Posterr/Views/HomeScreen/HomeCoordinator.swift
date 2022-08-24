@@ -23,9 +23,8 @@ final class HomeCoordinator: PostWriterCoordinator {
 		return homeVC
 	}
 	
-	func dismissPostCreationViewController(_ viewController: PostCreationViewController) {
+	func updatePostFeed() {
 		homeViewModel.startFetchPosts()
-		viewController.dismiss(animated: true)
 	}
 	
 }
