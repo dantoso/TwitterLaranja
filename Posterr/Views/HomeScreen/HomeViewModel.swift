@@ -7,7 +7,7 @@ final class HomeViewModel: ObservableObject {
 	
 	let service: FetchPostsService
 	
-	init(service: FetchPostsService = PosterrAPIService()) {
+	init(service: FetchPostsService = APIServiceMock()) {
 		self.service = service
 	}
 	

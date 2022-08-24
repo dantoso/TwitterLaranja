@@ -10,7 +10,7 @@ final class PostCreationViewModel: NSObject, UITextViewDelegate {
 	weak var counterLabel: UILabel?
 	weak var postButton: UIButton?
 	
-	init(author: User, mention: Post? = nil, service: UploadPostService = PosterrAPIService()) {
+	init(author: User, mention: Post? = nil, service: UploadPostService = APIServiceMock()) {
 		self.author = author
 		self.postData.mention = mention
 		self.service = service

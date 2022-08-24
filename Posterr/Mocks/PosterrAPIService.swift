@@ -1,19 +1,19 @@
 import Foundation
 
-struct PosterrAPIService: PosterrServices {
+struct APIServiceMock: PosterrServices {
 	
 	private static var timesPosted: Int = 0
 	
 	func uploadPost(_ post: Post, completion: @escaping (Result<Bool, PosterrAPIError>) -> Void) {
 		
-		guard PosterrAPIService.timesPosted < 5 else {
+		guard APIServiceMock.timesPosted < 5 else {
 			completion(.failure(PosterrAPIError.exceeding5PostsPerDay))
 			return
 		}
 		
 		DatabaseMock.addPost(post) { isPostStored in
 			if isPostStored {
-				PosterrAPIService.timesPosted += 1
+				APIServiceMock.timesPosted += 1
 			}
 		}
 		
