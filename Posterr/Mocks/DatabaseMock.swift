@@ -40,8 +40,11 @@ struct DatabaseMock {
 		return posts
 	}
 	
-	static func addPost(_ post: Post) {
-		guard let user = users[post.authorName] else {return}
+	static func addPost(_ post: Post, completion: @escaping (Bool) -> Void) {
+		guard let user = users[post.authorName] else {
+			completion(false)
+			return
+		}
 		
 		if post.mention == nil {
 			user.originalPosts.append(post)
@@ -54,5 +57,6 @@ struct DatabaseMock {
 		}
 		
 		posts.append(post)
+		completion(true)
 	}
 }

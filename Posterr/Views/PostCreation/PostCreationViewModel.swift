@@ -18,7 +18,9 @@ final class PostCreationViewModel: NSObject, UITextViewDelegate {
 	
 	func post() {
 		let newPost = Post(author: author, content: postData.content, mention: postData.mention)
-		service.uploadPost(newPost)
+		service.uploadPost(newPost, completion: { _ in
+			//TODO: Handle post errors
+		})
 	}
 	
 	
